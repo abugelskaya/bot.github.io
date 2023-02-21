@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700);
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 16px;
+}
+
+body > div {
+  align-items: center;
+}
+
+body,
+.header,
+.container,
+.dialog,
+.botSide,
+.clientSide,
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  min-height: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: #a2d2d8a4;
+  color: #324c66;
+  position: relative;
+}
+img {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+}
+
+.headerText {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.container {
+  align-self: center;
+  max-width: 900px;
+  min-height: 500px;
+  padding: 30px;
+  background-color: #f1f0efac;
+  font-weight: 400;
+  color: #557d97;
+  position: relative;
+}
+
+.dialog {
+  height: 450px;
+  border-radius: 10px;
+  border: 1px solid #557d97;
+  overflow-y: scroll;
+}
+
+div.botSide > div {
+  color: #1a2f44;
+  background-color: #97bbc6;
+  border-radius: 10px 10px 10px 2px;
+  width: 45%;
+  margin: 10px;
+}
+
+div.clientSide > div {
+  color: #d0dadd;
+  background-color: #00587a;
+  border-radius: 10px 10px 2px 10px;
+  width: 45%;
+  margin: 10px;
+}
+
+.clientSide {
+  align-items: flex-end;
+}
+
+.botText,
+.clientText {
+  padding: 5px;
+  line-height: 1.5em;
+}
+
+form {
+  position: absolute;
+  bottom: 10px;
+  flex-direction: row;
+  border: 2px solid #557d97;
+  border-radius: 10px;
+  min-width: 80%;
+  min-height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+  align-self: flex-start;
+}
+
+input {
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+input[value] {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+}
+
+.askBtn {
+  margin-right: 10px;
+  min-height: 30px;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+  color: #0f3057;
+  font-weight: 400;
+}
+
+button,
+input::placeholder {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.clear {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  min-height: 44px;
+  border-radius: 5px;
+  background-color: #16748e;
+  color: #d0dadd;
+  /* border: 2px solid #0f3057; */
+}
+
+button:hover {
+  border: 2px solid #557d97;
+  transition: 0.2s;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  .container {
+    max-width: 690px;
+  }
+  form {
+    min-width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 328px;
+  }
+
+  .dialog {
+    min-height: 300px;
+    overflow-y: scroll;
+  }
+
+  div.botSide > div,
+  div.clientSide > div {
+    width: 70%;
+  }
+
+  form {
+    position: relative;
+    margin-top: 40px;
+    min-width: 326px;
+  }
+
+  .clear {
+    position: relative;
+    margin-top: 15px;
+    margin-left: 60px;
+    min-width: 326px;
+    align-self: center;
+  }
+}
